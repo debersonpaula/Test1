@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "outDir": "./bin/",
+    "strict": true,
+    "target": "es5"
+  },
+  "include":["./src-server/**/*.ts"],
+  "exclude":["node_modules"]
+}

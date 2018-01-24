@@ -1,0 +1,30 @@
+<div class="d-panel">
+    <header>Register</header>
+    <section>
+        <form class="d-form">
+            <mat-form-field>
+                <input matInput placeholder="Username:" type="text" [(ngModel)]="UserRegister.username" name="username">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Password:" type="password" [(ngModel)]="UserRegister.userpass" name="userpass">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Confirm Password:" type="password" [(ngModel)]="PassConfirmation" name="userpass2">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="First Name:" type="text" [(ngModel)]="UserRegister.firstname" name="firstname">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Last Name:" type="text" [(ngModel)]="UserRegister.lastname" name="lastname">
+            </mat-form-field>
+
+            <button type="submit" mat-raised-button color="primary" (click)="submitRegister()">Register</button>
+        
+            <p>{{ NotifyMessage }}</p>
+        </form>
+    </section>
+</div>

@@ -1,0 +1,30 @@
+$borderColor: #d3e0e9;
+
+.d-panel{
+    display: block;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-color: $borderColor;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    color: #636b6f;
+    line-height: 1.6;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 1050px){width: 750px;}
+
+    header{        
+        color: #333;
+        background-color: #fff;
+        padding: 1em;
+        border-bottom: 1px solid transparent;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        border-color: $borderColor;
+    }
+    section{
+        padding: 1em;
+    }
+}

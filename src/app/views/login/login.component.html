@@ -1,0 +1,21 @@
+<div class="d-panel">
+    <header>Login</header>
+    <section>
+        <form class="d-form">
+            <mat-form-field>
+                <input matInput placeholder="Username:" type="text" [(ngModel)]="UserLogin.username" name="username">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Password:" type="password" [(ngModel)]="UserLogin.userpass" name="userpass">
+            </mat-form-field>
+
+            <button type="submit" mat-raised-button color="primary" (click)="submitLogin()">Log In</button>
+        
+            <p>{{ NotifyMessage }}</p>
+
+        </form>
+    </section>
+</div>
+
+

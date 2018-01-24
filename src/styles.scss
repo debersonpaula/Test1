@@ -1,0 +1,13 @@
+$headerColor: rgb(15,15,85);
+$logoColor: rgb(15,15,85);
+$sideColor: #222;
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import 'styles/base';
+@import 'styles/layout';
+@import 'styles/panel';
+@import 'styles/form';
+
+ng-template{
+    display: none;
+}

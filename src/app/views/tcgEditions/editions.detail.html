@@ -1,0 +1,15 @@
+<div *ngIf="item">
+    <h4>Editions > {{ item.name }}</h4>
+
+    <div><span>id: </span>{{item._id}}</div>
+    <div>
+        <label>Name:
+            <input [(ngModel)]="item.name" placeholder="Name of Edition"/>
+        </label>
+    </div>
+    <button (click)="save()">save</button>
+</div>
+
+<hr>
+
+<button (click)="goBack()">go back</button>
