@@ -27,9 +27,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     // update session for every changes in sessions
-    this.sessions.session.subscribe( data => {
-      this.session = data
-    });
+    this.sessions.session.subscribe( data => {this.session = data});
     // check if user is logged
     this.sessions.checkSession();
   }

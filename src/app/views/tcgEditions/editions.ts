@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { MainService } from '../../services/main.service';
 import { TServerResponse } from '../../struct/types';
 import { TRouteData } from '../../struct/types';
 import { TEdition } from '../../struct/tcgtypes';
+
+import { MainService } from '../../services/main.service';
+import { SessionsService } from '../../services/sessions.service';
 
 @Component({
   selector: 'app-home',
@@ -11,12 +13,16 @@ import { TEdition } from '../../struct/tcgtypes';
 export class EditionsComponent implements OnInit {
 
   editions: TEdition[];
+  session: any; // session content
 
-  constructor(private service: MainService) {
+  constructor(private service: MainService, private sessions: SessionsService) {
     this.editions = [];
   }
 
   ngOnInit() {
+    // update session for every changes in sessions
+    this.sessions.session.subscribe( data => {this.session = data});
+    // get editions list
     this.getEditions();
   }
 

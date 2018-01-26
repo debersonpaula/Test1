@@ -218,5 +218,30 @@
       "firstname": "Jack",
       "lastname": "Jones"
     }
+  },
+  {
+    "sessionid": "33fde04a6e17a7e6f5d6bd055f989f3fb90499d3",
+    "tokenid": "",
+    "data": {}
+  },
+  {
+    "sessionid": "f5c73b55ba938a879e904792728b73d4e8cea51a",
+    "tokenid": "",
+    "data": {}
+  },
+  {
+    "sessionid": "",
+    "tokenid": "",
+    "data": {}
+  },
+  {
+    "sessionid": "4bc1b19222e7254a0f59c75f10f8e76e6072b916",
+    "tokenid": "f8c6aa742d162a67056cfccf8414ca8b3963af11",
+    "data": {
+      "_id": "5a6b21bca795f300c47e00c5",
+      "username": "jack",
+      "firstname": "Jack",
+      "lastname": "Jones"
+    }
   }
 ]

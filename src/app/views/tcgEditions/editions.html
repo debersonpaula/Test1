@@ -1,12 +1,14 @@
-<h4>Editions | <button>Add</button></h4>
+<div *ngIf="!session;else content">You dont have permission</div>
 
-<ul>
-    <li *ngFor="let edition of editions">
-        <a routerLink="/edition/{{edition._id}}">
-            <span>{{edition.name}}</span>
-        </a>
-        <button>X</button>
-    </li>
-</ul>
+<ng-template #content>
+    <h4>Editions | <button>Add</button></h4>
 
-<div *ngIf="!session">You dont have permission</div>
+    <ul>
+        <li *ngFor="let edition of editions">
+            <a routerLink="/edition/{{edition._id}}">
+                <span>{{edition.name}}</span>
+            </a>
+            <button>X</button>
+        </li>
+    </ul>
+</ng-template>
