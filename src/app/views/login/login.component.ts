@@ -11,6 +11,8 @@ export class LoginComponent implements OnInit {
   UserLogin: TUserLogin;
   NotifyMessage: string;
 
+  message:string;
+
   constructor(private service: MainService) {
     this.UserLogin = {username: '', userpass: ''};
   }
@@ -29,7 +31,6 @@ export class LoginComponent implements OnInit {
       }
     });
   }
-
 }
 
 export const LoginData: TRouteData = {caption: 'Login', href: 'login', comp: LoginComponent, hideMenu: true};

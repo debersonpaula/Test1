@@ -1,2 +1,2 @@
-call ng serve
+call npm start
 pause

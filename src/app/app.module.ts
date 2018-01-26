@@ -14,6 +14,8 @@ import {
 } from '@angular/material';
 
 import { MainService } from './services/main.service';
+import { SessionsService } from './services/sessions.service';
+
 import { AppComponent } from './app.component';
 import { MainrouterModule } from './modules/mainrouter.module';
 import { HomeComponent } from './views/home/home.component';
@@ -53,7 +55,7 @@ export class MaterialModule {}
     // materials
     MaterialModule
   ],
-  providers: [MainService],
+  providers: [MainService, SessionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
