@@ -23,7 +23,10 @@
     <div class="d-menuleft">
       <header>Menu</header>
       <ul>
+        
         <li><a routerLink="/" mat-button [class.active]="currentRoute === '/'">Home</a></li>
+        <li><a routerLink="/test" mat-button [class.active]="currentRoute === '/test'">Test</a></li>
+
         <ng-container *ngIf="session">
           <li><a routerLink="/editions" mat-button [class.active]="currentRoute === '/editions'">Editions</a></li>
         </ng-container>

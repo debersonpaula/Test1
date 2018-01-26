@@ -6,23 +6,25 @@ import { TEdition } from '../../struct/tcgtypes';
 import { MainService } from '../../services/main.service';
 import { SessionsService } from '../../services/sessions.service';
 
+import { TSessionComponent } from '../../lib/session.component';
+
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 @Component({
   selector: 'app-home',
   templateUrl: './editions.html'
 })
-export class EditionsComponent implements OnInit {
-
+// export class EditionsComponent implements OnInit {
+export class EditionsComponent extends TSessionComponent {
+  /** editions list */
   editions: TEdition[];
-  session: any; // session content
 
-  constructor(private service: MainService, private sessions: SessionsService) {
-    this.editions = [];
+  constructor (sessions: SessionsService, private service: MainService) {
+    super(sessions);
   }
 
-  ngOnInit() {
-    // update session for every changes in sessions
-    this.sessions.session.subscribe( data => {this.session = data});
-    // get editions list
+  OnRun() {
+    console.log('on run');
     this.getEditions();
   }
 

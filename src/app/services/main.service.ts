@@ -57,7 +57,6 @@ export class MainService {
         callback(value);
     }
   }
-
 }
 
 /*---------------------------------------------------*/

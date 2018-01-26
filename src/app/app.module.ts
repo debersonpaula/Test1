@@ -18,11 +18,15 @@ import { SessionsService } from './services/sessions.service';
 
 import { AppComponent } from './app.component';
 import { MainrouterModule } from './modules/mainrouter.module';
+
+import { TSessionComponent } from './lib/session.component';
+
 import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { EditionsComponent } from './views/tcgEditions/editions';
 import { EditionsDetailComponent } from './views/tcgEditions/editions.detail';
+import { TestComponent } from './views/test/test';
 
 @NgModule({
   exports: [
@@ -41,7 +45,10 @@ export class MaterialModule {}
     LoginComponent,
     RegisterComponent,
     EditionsComponent,
-    EditionsDetailComponent
+    EditionsDetailComponent,
+
+    TSessionComponent,
+    TestComponent
   ],
   imports: [
     // angular modules

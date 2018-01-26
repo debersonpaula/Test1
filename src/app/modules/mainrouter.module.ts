@@ -7,8 +7,10 @@ import { RegisterData } from '../views/register/register.component';
 import { EditionsData } from '../views/tcgEditions/editions';
 import { EditionsDetailData } from '../views/tcgEditions/editions.detail';
 
+import { TestData } from '../views/test/test';
+
 // create route data list
-export const RouteData: TRouteData[] = [ HomeData, LoginData, RegisterData, EditionsData, EditionsDetailData ];
+export const RouteData: TRouteData[] = [ HomeData, LoginData, RegisterData, EditionsData, EditionsDetailData, TestData ];
 
 // generate route components from RouteData
 const routes: Routes = [];
