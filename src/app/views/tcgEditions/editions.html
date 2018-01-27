@@ -1,7 +1,7 @@
 <div *ngIf="!session;else content">You dont have permission</div>
 
 <ng-template #content>
-    <h4>Editions | <button>Add</button></h4>
+    <h4>Editions | <button routerLink="/edition/0">Add</button></h4>
 
     <ul>
         <li *ngFor="let edition of editions">

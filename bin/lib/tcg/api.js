@@ -14,7 +14,17 @@ function create(server) {
         });
     });
     edition.put('/', server.AuthServer.AuthRoute, function (req, res) {
-        model.updateById(req.body, req.body._id, function (result) {
+        if (req.body._id) {
+            model.updateById(req.body, req.body._id, function (result) {
+                sendjson(res, 200, [result]);
+            });
+        }
+        else {
+            sendjson(res, 400, ['Invalid Update']);
+        }
+    });
+    edition.post('/', server.AuthServer.AuthRoute, function (req, res) {
+        model.insert(req.body, function (result) {
             sendjson(res, 200, [result]);
         });
     });

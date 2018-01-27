@@ -1,0 +1,57 @@
+[
+  {
+    "sessionid": "797350f4f5218923dfd90fe30264ed0cd58d4047",
+    "tokenid": "abf892c34e924461337883082b04c7e71a1d9821",
+    "data": {
+      "_id": "5a6bdb1cc8e63717c8b04aba",
+      "username": "jack",
+      "firstname": "Jack",
+      "lastname": "Jones"
+    }
+  },
+  {
+    "sessionid": "b835da4ddec7b309277b13ebf1ea9604b5d1d289",
+    "tokenid": "7de4d71869ba8878be8926288f2f732c4968f5d0",
+    "data": {
+      "_id": "5a6bdb1cc8e63717c8b04aba",
+      "username": "jack",
+      "firstname": "Jack",
+      "lastname": "Jones"
+    }
+  },
+  {
+    "sessionid": "ee11b412e38e8c99be63179d07e2f8cca2f59343",
+    "tokenid": "04892fcf39cbbd0b18625c3323605ba9f808e38b",
+    "data": {
+      "_id": "5a6bdb1cc8e63717c8b04aba",
+      "username": "jack",
+      "firstname": "Jack",
+      "lastname": "Jones"
+    }
+  },
+  {
+    "sessionid": "9e0f2c863cc5ed84514d9f61d5fdd3ec73cfce0e",
+    "tokenid": "b2e95f4fdafa8646bfa02da3feb8d8dc214785f9",
+    "data": {
+      "_id": "5a6bdb1cc8e63717c8b04aba",
+      "username": "jack",
+      "firstname": "Jack",
+      "lastname": "Jones"
+    }
+  },
+  {
+    "sessionid": "9fa653687d1c62e3e1442a5debbad6e18e65b463",
+    "tokenid": "",
+    "data": {}
+  },
+  {
+    "sessionid": "",
+    "tokenid": "",
+    "data": {}
+  },
+  {
+    "sessionid": "6cb7c05378744c03f74650d94a735b2d84778107",
+    "tokenid": "",
+    "data": {}
+  }
+]

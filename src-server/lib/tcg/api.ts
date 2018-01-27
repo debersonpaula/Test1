@@ -18,7 +18,17 @@ export function create( server: TNEMAServer ) {
     });
 
     edition.put('/', server.AuthServer.AuthRoute, (req: Request, res: Response) => {
-        model.updateById(req.body, req.body._id, result => {
+        if (req.body._id) {
+            model.updateById(req.body, req.body._id, result => {
+                sendjson(res, 200, [result]);
+            });
+        } else {
+            sendjson(res, 400, ['Invalid Update']);
+        }
+    });
+
+    edition.post('/', server.AuthServer.AuthRoute, (req: Request, res: Response) => {
+        model.insert(req.body, result => {
             sendjson(res, 200, [result]);
         });
     });

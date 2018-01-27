@@ -1,21 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { TServerResponse } from '../../struct/types';
 import { TRouteData } from '../../struct/types';
 import { TEdition } from '../../struct/tcgtypes';
 
 import { MainService } from '../../services/main.service';
 import { SessionsService } from '../../services/sessions.service';
-
 import { TSessionComponent } from '../../lib/session.component';
-
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
   templateUrl: './editions.html'
 })
-// export class EditionsComponent implements OnInit {
 export class EditionsComponent extends TSessionComponent {
+
   /** editions list */
   editions: TEdition[];
 
@@ -24,7 +20,6 @@ export class EditionsComponent extends TSessionComponent {
   }
 
   OnRun() {
-    console.log('on run');
     this.getEditions();
   }
 

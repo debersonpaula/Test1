@@ -1,2 +1,2 @@
-call node server
+call npm run server
 pause

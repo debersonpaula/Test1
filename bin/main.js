@@ -5,6 +5,7 @@ var tnema_1 = require("tnema");
 var env;
 env = 'dev';
 // env = 'prod';
+console.log('Creating server enviroment...');
 var server = new tnema_1.TNEMAServer('mtg', './sessions/mtg.json');
 server.Port = 3000;
 server.MongoSource = 'mongodb://127.0.0.1/mtg';
