@@ -1,29 +1,33 @@
+// angular modules
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
+// materials
 import {
   MatButtonModule,
   MatMenuModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatDialogModule
 } from '@angular/material';
 
+// services and library
 import { MainService } from './services/main.service';
 import { SessionsService } from './services/sessions.service';
-
-import { AppComponent } from './app.component';
-import { MainrouterModule } from './modules/mainrouter.module';
-
 import { TSessionComponent } from './lib/session.component';
 
+// components and modules
+import { AppRoot } from './approot';
+import { MainrouterModule } from './modules/mainrouter.module';
+import { NavbarComponent } from './layouts/navbar';
+import { LoginComponent, RegisterComponent } from './layouts/auth';
+
+// views
 import { HomeComponent } from './views/home/home.component';
-import { LoginComponent } from './views/login/login.component';
-import { RegisterComponent } from './views/register/register.component';
 import { EditionsComponent } from './views/tcgEditions/editions';
 import { EditionsDetailComponent } from './views/tcgEditions/editions.detail';
 import { TestComponent } from './views/test/test';
@@ -33,22 +37,23 @@ import { TestComponent } from './views/test/test';
     MatButtonModule,
     MatMenuModule,
     MatFormFieldModule,
-    MatInputModule
-  ]
+    MatInputModule,
+    MatDialogModule
+  ],
+  declarations: []
 })
 export class MaterialModule {}
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppRoot,
+    TSessionComponent,
+    NavbarComponent,
     HomeComponent,
-    LoginComponent,
-    RegisterComponent,
+    LoginComponent, RegisterComponent,
     EditionsComponent,
     EditionsDetailComponent,
-
-    TSessionComponent,
-    TestComponent
+    TestComponent,
   ],
   imports: [
     // angular modules
@@ -62,7 +67,8 @@ export class MaterialModule {}
     // materials
     MaterialModule
   ],
+  entryComponents: [LoginComponent, RegisterComponent],
   providers: [MainService, SessionsService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppRoot]
 })
 export class AppModule { }

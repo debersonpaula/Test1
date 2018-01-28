@@ -10,7 +10,7 @@ var server = new tnema_1.TNEMAServer('mtg', './sessions/mtg.json');
 server.Port = 3000;
 server.MongoSource = 'mongodb://127.0.0.1/mtg';
 // allow headers
-server.HttpServer.App.use(require('./lib/header').allowHeader);
+server.HttpServer.App.use(require('./lib/helpers/header').allowHeader);
 // add model
 var model = require('./lib/modelAuth');
 server.AuthServer.OverwriteOptions(model.authOptions);

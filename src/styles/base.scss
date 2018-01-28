@@ -29,9 +29,9 @@ ul{
 }
 body{
 	line-height:1;
-	@media (max-width: $screenWidthS1){
-		overflow-y: hidden;
-	}
+	//@media (max-width: $screenWidthS1){
+		//overflow-y: hidden;
+	//}
 }
 //layout basics
 .d-page{

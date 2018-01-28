@@ -31,6 +31,12 @@ export class EditionsComponent extends TSessionComponent {
     });
   }
 
+  delete(id) {
+    this.service.doDelete('/api/edition/' + id, () => {
+      this.getEditions();
+    });
+  }
+
 }
 
 export const EditionsData: TRouteData = {caption: 'Editions', comp: EditionsComponent, hideMenu: false, href: 'editions'};

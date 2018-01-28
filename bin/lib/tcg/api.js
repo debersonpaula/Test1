@@ -1,43 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var apitool_1 = require("../helpers/apitool");
 function create(server) {
-    var edition = server.HttpServer.Router('/api/edition');
-    var model = server.MongoServer.SearchModel('lib_editions');
-    edition.get('/', server.AuthServer.AuthRoute, function (req, res) {
-        model.find({}, function (result) {
-            sendjson(res, 200, result);
-        });
-    });
-    edition.get('/:id', server.AuthServer.AuthRoute, function (req, res) {
-        model.find({ _id: req.params.id }, function (result) {
-            sendjson(res, 200, result);
-        });
-    });
-    edition.put('/', server.AuthServer.AuthRoute, function (req, res) {
-        if (req.body._id) {
-            model.updateById(req.body, req.body._id, function (result) {
-                sendjson(res, 200, [result]);
-            });
-        }
-        else {
-            sendjson(res, 400, ['Invalid Update']);
-        }
-    });
-    edition.post('/', server.AuthServer.AuthRoute, function (req, res) {
-        model.insert(req.body, function (result) {
-            sendjson(res, 200, [result]);
-        });
-    });
+    var edition = new apitool_1.TAuthAPI(server, 'lib_editions', '/api/edition');
 }
 exports.create = create;
-// ===================================================
-// === general methods ===============================
-// ===================================================
-function sendjson(res, status, msg) {
-    res.status(status).json({
-        messages: msg,
-        status: status
-    });
-}
-// ===================================================
-// ===================================================

@@ -28,10 +28,8 @@ export class MainService {
     const dest = this.baseURL + url;
     const post = this.http.post<TServerResponse>(dest, data, getHeader());
     post.subscribe(
-        value => {
-            this.executeCallback(value, callback);
-        },
-        err =>  this.executeCallback(err.error, callback),
+        value => this.executeCallback(value, callback),
+        err => this.executeCallback(err.error, callback)
     );
   }
 
@@ -40,11 +38,16 @@ export class MainService {
     const dest = this.baseURL + url;
     const post = this.http.put<TServerResponse>(dest, data, getHeader());
     post.subscribe(
-        value => {
-            this.executeCallback(value, callback);
-        },
-        err =>  this.executeCallback(err.error, callback),
+        value => this.executeCallback(value, callback),
+        err =>  this.executeCallback(err.error, callback)
     );
+  }
+
+  /** DELETE: send data to server */
+  doDelete(url: string, callback?: () => void): void {
+    const dest = this.baseURL + url;
+    const del = this.http.delete<TServerResponse>(dest, getHeader());
+    del.subscribe( () => callback && callback() );
   }
 
   /** Store Token for authentication */

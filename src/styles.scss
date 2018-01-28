@@ -1,13 +1,13 @@
-$headerColor: rgb(15,15,85);
-$logoColor: rgb(15,15,85);
-$sideColor: #222;
+@import '~@angular/material/theming';
+@import './styles/app-theme';
 
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-@import 'styles/base';
-@import 'styles/layout';
-@import 'styles/panel';
-@import 'styles/form';
+// Include material core styles.
+@include mat-core();
 
-ng-template{
-    display: none;
-}
+// Define the light theme.
+$primary: mat-palette($mat-indigo);
+$accent:  mat-palette($mat-pink, A200, A100, A400);
+
+$theme: mat-light-theme($primary, $accent);
+@include angular-material-theme($theme);
+@include app-theme($theme);

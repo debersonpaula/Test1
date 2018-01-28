@@ -20,7 +20,7 @@ export class SessionsService {
   }
 
   /** check sessions and store in the session data */
-  checkSession() {
+  startSession() {
     this.service.doGet('/user', res => {
       if (res.status === 200) {
         this._sessionSource.next(res.messages[0]);

@@ -1,4 +1,4 @@
-# Angular 5 + TNEMA Server
+# Angular 5 + TNEMA Server + Materials
 
 This application uses the MEAN stack architeture with Angular 5.x.
 

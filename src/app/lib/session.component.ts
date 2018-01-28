@@ -14,12 +14,20 @@ export class TSessionComponent implements OnInit {
     /** initialize session variable */
     ngOnInit() {
         // update session for every changes in sessions
-        this.sessions.session.subscribe( data => {this.session = data});
+        this.sessions.session.subscribe( data => this.session = data);
         // executes OnRun
         this.OnRun();
     }
     /** execute after OnInit */
-    OnRun() {
+    OnRun() {}
 
+    /** start sessions check */
+    doCheck(): void {
+        this.sessions.startSession();
+    }
+
+    /** Execute Logout action */
+    doLogout(): void {
+        this.sessions.stopSession();
     }
 }

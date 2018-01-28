@@ -8,7 +8,7 @@
             <a routerLink="/edition/{{edition._id}}">
                 <span>{{edition.name}}</span>
             </a>
-            <button>X</button>
+            <button (click)="delete(edition._id)">X</button>
         </li>
     </ul>
 </ng-template>
