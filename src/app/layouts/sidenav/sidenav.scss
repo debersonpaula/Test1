@@ -68,7 +68,7 @@ app-sidenav {
 			}
 		}
 
-		mat-sidenav-content {
+		.content {
 			min-height: 100%;
 			display: flex;
 			flex-direction: column;
@@ -80,7 +80,7 @@ app-sidenav {
 		}
 
 		@media (max-width: 720px) {
-			flex: 1 0 auto;
+			// flex: 1 0 auto;
 		}
 	}
 }

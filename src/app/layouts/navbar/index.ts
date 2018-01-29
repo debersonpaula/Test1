@@ -6,8 +6,8 @@ import { LoginComponent, RegisterComponent } from '../auth';
 
 @Component({
   selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  templateUrl: './navbar.html',
+  styleUrls: ['./navbar.scss']
 })
 export class Navbar extends TSessionComponent {
   constructor(sessions: SessionsService, public dialog: MatDialog) {

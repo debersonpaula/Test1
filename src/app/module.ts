@@ -13,7 +13,8 @@ import {
   MatFormFieldModule,
   MatInputModule,
   MatDialogModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatIconModule
 } from '@angular/material';
 
 // services and library
@@ -27,6 +28,8 @@ import { AppRoutes } from './routes';
 import { Navbar } from './layouts/navbar';
 import { LoginComponent, RegisterComponent } from './layouts/auth';
 import { Sidenav } from './layouts/sidenav';
+import { Footer } from './layouts/footer';
+import { Header } from './layouts/header';
 
 // views
 import { HomePage } from './views/home';
@@ -41,7 +44,8 @@ import { TestComponent } from './views/test/test';
     MatFormFieldModule,
     MatInputModule,
     MatDialogModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatIconModule
   ],
   declarations: []
 })
@@ -51,8 +55,7 @@ export class MaterialModule {}
   declarations: [
     AppRoot,
     TSessionComponent,
-    Navbar,
-    Sidenav,
+    Navbar, Sidenav, Footer, Header,
     HomePage,
     LoginComponent, RegisterComponent,
     EditionsComponent,

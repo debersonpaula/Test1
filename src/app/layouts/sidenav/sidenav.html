@@ -1,6 +1,9 @@
 <mat-sidenav-container>
-
-  <mat-sidenav opened mode="side">
+  <mat-sidenav #sidenav
+               [opened]="!isScreenSmall()"
+               [mode]="isScreenSmall() ? 'over' : 'side'"
+               [fixedInViewport]="isScreenSmall()"
+               fixedTopGap="56">
     <nav>
       <h3>Menu</h3>
       <ul>
@@ -10,8 +13,10 @@
     </nav>
   </mat-sidenav>
 
-  <mat-sidenav-content>
+  <div class="content">
+    <app-header (toggleSidenav)="sidenav.toggle()"></app-header>
     <router-outlet></router-outlet>
-  </mat-sidenav-content>
+    <app-footer></app-footer>
+  </div>
 
 </mat-sidenav-container>
