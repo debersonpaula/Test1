@@ -1,5 +1,6 @@
 @import '../../node_modules/@angular/material/theming';
 @import '../app/layouts/navbar/navbar-theme';
+@import '../app/layouts/sidenav/sidenav-theme';
 
 // Styles for the docs app that are based on the current theme.
 @mixin app-theme($theme) {
@@ -18,4 +19,5 @@
 
 	// components
 	@include nav-bar-theme($theme);
+	@include sidenav-theme($theme);
 }

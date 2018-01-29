@@ -12,7 +12,8 @@ import {
   MatMenuModule,
   MatFormFieldModule,
   MatInputModule,
-  MatDialogModule
+  MatDialogModule,
+  MatSidenavModule
 } from '@angular/material';
 
 // services and library
@@ -22,12 +23,13 @@ import { TSessionComponent } from './lib/session.component';
 
 // components and modules
 import { AppRoot } from './approot';
-import { MainrouterModule } from './modules/mainrouter.module';
-import { NavbarComponent } from './layouts/navbar';
+import { AppRoutes } from './routes';
+import { Navbar } from './layouts/navbar';
 import { LoginComponent, RegisterComponent } from './layouts/auth';
+import { Sidenav } from './layouts/sidenav';
 
 // views
-import { HomeComponent } from './views/home/home.component';
+import { HomePage } from './views/home';
 import { EditionsComponent } from './views/tcgEditions/editions';
 import { EditionsDetailComponent } from './views/tcgEditions/editions.detail';
 import { TestComponent } from './views/test/test';
@@ -38,7 +40,8 @@ import { TestComponent } from './views/test/test';
     MatMenuModule,
     MatFormFieldModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSidenavModule
   ],
   declarations: []
 })
@@ -48,8 +51,9 @@ export class MaterialModule {}
   declarations: [
     AppRoot,
     TSessionComponent,
-    NavbarComponent,
-    HomeComponent,
+    Navbar,
+    Sidenav,
+    HomePage,
     LoginComponent, RegisterComponent,
     EditionsComponent,
     EditionsDetailComponent,
@@ -63,7 +67,7 @@ export class MaterialModule {}
     RouterModule,
     FormsModule,
     // router
-    MainrouterModule,
+    RouterModule.forRoot(AppRoutes),
     // materials
     MaterialModule
   ],

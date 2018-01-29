@@ -1,0 +1,17 @@
+<mat-sidenav-container>
+
+  <mat-sidenav opened mode="side">
+    <nav>
+      <h3>Menu</h3>
+      <ul>
+        <li><a routerLink="/" routerLinkActive="item-selected">Home</a></li>
+        <li><a routerLink="/test" routerLinkActive="item-selected">Test</a></li>
+      </ul>
+    </nav>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
