@@ -36,7 +36,6 @@ export class EditionsDetailComponent extends TSessionComponent {
 
   getItem(): void {
     const id = this.route.snapshot.paramMap.get('id');
-
     if (id != '0') {
       this.service.doGet('/api/edition/' + id, res => {
         if (res.status === 200) {
@@ -46,11 +45,9 @@ export class EditionsDetailComponent extends TSessionComponent {
     } else {
       this.item = new TEdition;
     }
-    
   }
 
   save(): void {
-
     if (this.item._id) {
       this.service.doPut('/api/edition/', this.item, res => {
         if (res.status === 200) {
@@ -64,10 +61,7 @@ export class EditionsDetailComponent extends TSessionComponent {
         }
       });
     }
-    
-    
   }
-
 }
 
 export const EditionsDetailData: TRouteData = {caption: 'Editions', comp: EditionsDetailComponent, hideMenu: true, href: 'edition/:id'};

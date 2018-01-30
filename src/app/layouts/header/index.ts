@@ -1,6 +1,5 @@
-import { Component, ViewEncapsulation, Output, EventEmitter, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { RouterEvent } from '@angular/router/src/events';
+import { Component, ViewEncapsulation, Output, EventEmitter } from '@angular/core';
+import { Router, RoutesRecognized  } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,18 +7,17 @@ import { RouterEvent } from '@angular/router/src/events';
   styleUrls: ['./header.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class Header implements OnInit {
+export class Header {
   @Output() toggleSidenav = new EventEmitter<void>();
 
-  constructor(private _router: Router) {
-    this._router.events.subscribe((value: RouterEvent) => {
-      // value
-    });
-  }
+  currentPage: string;
 
-  ngOnInit() {
-    //this._router.events.subscribe(() => {
-      //console.log(this._route.snapshot.data['caption']);
-    //});
+  constructor(private _router: Router) {
+    _router.events.subscribe( event => {
+      if (event instanceof RoutesRecognized) {
+        let route = event.state.root.firstChild;
+        this.currentPage = route.data.pagename;
+      }
+    });
   }
 }

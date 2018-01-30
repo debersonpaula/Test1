@@ -4,6 +4,6 @@ import { TestComponent } from './views/test/test';
 
 export const AppRoutes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
-    {path: 'home', component: HomePage, data: {caption: 'Home'}},
-    {path: 'test', component: TestComponent, data: {caption: 'Test'}},
+    {path: 'home', component: HomePage, data: {pagename: 'Home'}},
+    {path: 'test', component: TestComponent, data: {pagename: 'Test'}},
 ];

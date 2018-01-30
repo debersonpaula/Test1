@@ -76,6 +76,7 @@ app-sidenav {
 			// The rule will match the element following the router-outlet which will be the routed component.
 			router-outlet + * {
 				flex-grow: 1;
+				padding: 1em;
 			}
 		}
 
