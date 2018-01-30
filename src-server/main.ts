@@ -1,4 +1,5 @@
 import { TNEMAServer } from 'tnema';
+import * as apiMain from './lib/apiMain';
 /************************************************************/
 let env: string;
 env = 'dev';
@@ -16,7 +17,8 @@ const model = require('./lib/modelAuth');
 server.AuthServer.OverwriteOptions(model.authOptions);
 server.AuthServer.OverwriteSchemas(model.authModel);
 // start TCG engine
-require('./lib/tcg').create(server);
+// require('./lib/apiMain').create(server);
+apiMain.create(server);
 // add static route
 if (env !== 'dev') {
     // Add Static Route

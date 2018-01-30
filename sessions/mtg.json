@@ -28,5 +28,15 @@
     "sessionid": "3ca7657ed19a2af4fe2a626386426fb74b9bba27",
     "tokenid": "",
     "data": {}
+  },
+  {
+    "sessionid": "fd3fd5d619ae424709812a75b2ebb6688480b9be",
+    "tokenid": "298d25795a45ec23ceaa2519bde51e2945d0d151",
+    "data": {
+      "_id": "5a6b21bca795f300c47e00c5",
+      "username": "jack",
+      "firstname": "Jack",
+      "lastname": "Jones"
+    }
   }
 ]

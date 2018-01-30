@@ -36,6 +36,7 @@ import { HomePage } from './views/home';
 import { EditionsComponent } from './views/tcgEditions/editions';
 import { EditionsDetailComponent } from './views/tcgEditions/editions.detail';
 import { TestComponent } from './views/test/test';
+import { NotesEditor, NotesList } from './views/notes';
 
 @NgModule({
   exports: [
@@ -61,6 +62,7 @@ export class MaterialModule {}
     EditionsComponent,
     EditionsDetailComponent,
     TestComponent,
+    NotesEditor, NotesList
   ],
   imports: [
     // angular modules

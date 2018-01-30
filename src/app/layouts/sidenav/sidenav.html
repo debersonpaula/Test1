@@ -9,12 +9,16 @@
       <ul>
         <li><a routerLink="/home" routerLinkActive="item-selected">Home</a></li>
         <li><a routerLink="/test" routerLinkActive="item-selected">Test</a></li>
+        <ng-container *ngIf="session">
+          <li><a routerLink="/notes" routerLinkActive="item-selected">Notes</a></li>
+        </ng-container>
       </ul>
     </nav>
   </mat-sidenav>
 
   <div class="content">
     <app-header (toggleSidenav)="sidenav.toggle()"></app-header>
+    {{session.firstname}}
     <router-outlet></router-outlet>
     <app-footer></app-footer>
   </div>
